@@ -102,7 +102,6 @@ a:hover{
     max-height: 0;
     overflow: hidden;
     transition: all 0.3 ease-in-out;
-
 }
 
 .menu-links a {
@@ -117,7 +116,6 @@ a:hover{
 
 .menu-links li {
     list-style: none;
-
 }
 
 .menu-links.open {
@@ -130,7 +128,6 @@ a:hover{
 
 .hamburger-icon.open span:nth-child(2) {
     opacity: 0;
-
 }
 
 .hamburger-icon.open span:last-child {
@@ -138,11 +135,60 @@ a:hover{
 }
 
 hamburger-icon span:first-child {
-    opacity: none;
-
-}
-
-hamburger-icon span:first-child {
     transform: none;
 }
 
+hamburger-icon span:first-child {
+    opacity: 1;
+}
+
+.hamburger-icon span:first-child{
+    transform: none;
+}
+
+/* SECTIONS */
+
+section{
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section-container {
+    display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+    display: flex;
+    justify-content: center;
+    gap: Srem;
+    height: 80vh;
+}
+
+.section_pic-container {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+.section_text{
+    align-self: center;
+    text-align: center;
+}
+
+.section_text p{
+    font-weight: 600;
+}
+
+.section_text_p1 {
+    text-align: center;
+}
+
+.section_text_p1 {
+    text-align: center;
+}
