@@ -27,57 +27,95 @@ a,
 }
 
 /* DESKTOP NAV */
-
-nav, 
-.nav-links{
+nav {
+    margin: 0px;
+    position: fixed;
+    left: 50%;
+    width: 100%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
+    border-radius: 8px;
+    z-index: 1000;
+    transform: translateX(-50%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     display: flex;
-}
-
-nav{
     justify-content: space-around;
     align-items: center;
-    height: 17vh;
+    height: 8vh;
 }
 
-.nav-links{
-    gap: 2rem;
-    list-style: none;
-    font-size: 1.5rem;
-}
-
-a {
-    color: black;
-    text-decoration: none;
-    text-decoration-color: white;
-}
-
-a:hover{
-    color: grey;
-    text-decoration: underline;
-    text-underline-offset: 1rem;
-    text-decoration-color: rgb(181, 181, 181);
-}
-
-.logo{
-    font-size: 2rem;
-}
-
-.logo:hover{
-    cursor: default;
-}
-
-/*HAMBURGER MENU*/
-
-#hamburger-nav{
-    display: none;
-}
-
-.hamburger.menu{
-    position: relative;
+nav a {
+    line-height: 50px;
+    font-size: 1.0rem;
     display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-.hamburger-icon{
+
+.nav-links {
+    display: flex;
+    /* gap: 2rem; */
+    list-style: none;
+}
+
+/* Lava Lamp Animation */
+nav .animation {
+    position:fixed;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all .5s ease 0s;
+    border-radius: 8px;
+}
+
+a:nth-child(1) {
+    width: 100px;
+}
+a:nth-child(2) {
+    width: 100px;
+}
+a:nth-child(3) {
+    width: 100px;
+}
+a:nth-child(4) {
+    width: 100px;
+}
+
+
+nav .start-home, a:nth-child(1):hover ~ .animation {
+    width: 100px;
+    left: 0;
+    background-color: #7BBF7A;
+}
+nav .start-about, a:nth-child(2):hover ~ .animation {
+    width: 100px;
+    left: 100px;
+    background-color: #7BBF7A;
+}
+nav .start-service, a:nth-child(3):hover ~ .animation {
+    width: 100px;
+    left: 200px;
+    background-color: #7BBF7A;
+}
+nav .start-contact, a:nth-child(4):hover ~ .animation {
+    width: 100px;
+    left: 300px;
+    background-color: #7BBF7A;
+}
+
+/* HAMBURGER MENU */
+#hamburger-nav {
+    display: none; /* Retain the display properties for mobile */
+}
+
+.hamburger-icon {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -86,14 +124,15 @@ a:hover{
     cursor: pointer;
 }
 
-.hamburger-icon span{
+.hamburger-icon span {
     width: 100%;
     height: 2px;
     background-color: black;
-    transition: all 0.3 ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
-.menu-links{
+/* Mobile Menu Functionality */
+.menu-links {
     position: absolute;
     top: 100%;
     right: 0;
@@ -101,27 +140,14 @@ a:hover{
     width: fit-content;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.3 ease-in-out;
-}
-
-.menu-links a {
-    display: block;
-    padding: 100%;
-    text-align: center;
-    font-size: 1.5rem;
-    color: black;
-    text-decoration: none;
-    transition: all 0.3 ease-in-out;
-}
-
-.menu-links li {
-    list-style: none;
+    transition: all 0.3s ease-in-out;
 }
 
 .menu-links.open {
     max-height: 300px;
 }
 
+/* Hamburger Animation */
 .hamburger-icon.open span:first-child {
     transform: rotate(45deg) translate(10px, 5px);
 }
@@ -134,17 +160,6 @@ a:hover{
     transform: rotate(-45deg) translate(10px, -5px);
 }
 
-hamburger-icon span:first-child {
-    transform: none;
-}
-
-hamburger-icon span:first-child {
-    opacity: 1;
-}
-
-.hamburger-icon span:first-child{
-    transform: none;
-}
 
 /* SECTIONS */
 
@@ -165,8 +180,6 @@ section{
 #profile {
     display: flex;
     justify-content: center;
-    gap: Srem;
-    height: 80vh;
 }
 
 .section_pic-container {
