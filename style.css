@@ -9,6 +9,8 @@
 
 body {
     font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #000428, #004e92); /* Navy blue to dark cyan gradient */
+    color: white; /* Set the default text color to white */
 }
 
 html {
@@ -16,14 +18,15 @@ html {
 }
 
 p {
-    color: rgb(85, 85, 85);
+    color: rgb(170, 170, 170); /* Lighter shade of white for paragraph text */
 }
 
-/*TRANSITION*/
+/* TRANSITION */
 
 a, 
-.btn{
+.btn {
     transition: all 300 ms ease;
+    color: white; /* Set link and button text to white */
 }
 
 /* DESKTOP NAV */
@@ -32,7 +35,7 @@ nav {
     position: fixed;
     left: 50%;
     width: 100%;
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)); /* Darker gradient */
     border-radius: 8px;
     z-index: 1000;
     transform: translateX(-50%);
@@ -53,11 +56,9 @@ nav a {
     z-index: 1;
     text-transform: uppercase;
     text-align: center;
-    color: black;
-    cursor: pointer;
+    color: white; /* Set nav link color to white */
     transition: color 0.3s ease;
 }
-
 
 .nav-links {
     display: flex;
@@ -67,7 +68,7 @@ nav a {
 
 /* Lava Lamp Animation */
 nav .animation {
-    position:fixed;
+    position: fixed;
     height: 100%;
     top: 0;
     z-index: 0;
@@ -87,7 +88,6 @@ a:nth-child(3) {
 a:nth-child(4) {
     width: 100px;
 }
-
 
 nav .start-home, a:nth-child(1):hover ~ .animation {
     width: 100px;
@@ -127,7 +127,7 @@ nav .start-contact, a:nth-child(4):hover ~ .animation {
 .hamburger-icon span {
     width: 100%;
     height: 2px;
-    background-color: black;
+    background-color: white; /* Set hamburger icon color to white */
     transition: all 0.3s ease-in-out;
 }
 
@@ -136,7 +136,7 @@ nav .start-contact, a:nth-child(4):hover ~ .animation {
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: white;
+    background-color: black; /* Set mobile menu background to black */
     width: fit-content;
     max-height: 0;
     overflow: hidden;
@@ -163,9 +163,8 @@ nav .start-contact, a:nth-child(4):hover ~ .animation {
 
 /* SECTIONS */
 
-section{
+section {
     padding-top: 4vh;
-    height: 96vh;
     margin: 0 10rem;
     box-sizing: border-box;
     min-height: fit-content;
@@ -178,6 +177,7 @@ section{
 /* PROFILE SECTION */
 
 #profile {
+    height: 96vh;
     display: flex;
     justify-content: center;
 }
@@ -187,15 +187,17 @@ section{
     height: 400px;
     width: 400px;
     margin: auto 0;
+    translate: -100px;
 }
 
-.section_text{
+.section_text {
     align-self: center;
     text-align: center;
 }
 
-.section_text p{
+.section_text p {
     font-weight: 600;
+    color: white; /* Set section text color to white */
 }
 
 .section_text_p1 {
@@ -205,14 +207,16 @@ section{
 .section_text_p2 {
     font-size: 1.75rem;
     margin-bottom: 1rem;
+    color: white; /* Set section text color to white */
 }
 
 .title {
     font-size: 3rem;
     text-align: center;
+    color: white; /* Set title color to white */
 }
 
-#socials-container{
+#socials-container {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
@@ -228,50 +232,46 @@ section{
 
 /* BUTTONS */
 
-.btn-container{
+.btn-container {
     display: flex;
     justify-content: center;
     gap: 1rem;
 }
 
-.btn{
+.btn {
     font-weight: 600;
-    transition:all 3000ms ease;
+    transition: all 300ms ease;
     padding: 1rem;
     width: 8rem;
     border-radius: 2rem;
+    color: black; /* Set button text color to black */
+    background-color: white; /* Set button background color to white */
 }
 
 .btn-color-1, 
 .btn-color-2 {
-    border: rgb(53, 53, 53) 0.1rem solid;
+    border: rgb(255, 255, 255) 0.1rem solid; /* Set button border to white */
 }
 
 .btn-color-1:hover,
-.btn-color-2:hover{
+.btn-color-2:hover {
     cursor: pointer;
 }
 
-.btn-color-1, 
-.btn-color-2:hover {
-    border: rgb(53, 53, 53);
-    color: white;
-}
-
-.btn-color-1:hover{
-    background: rgb(0, 0, 0);
-}
-
-.btn-color-2{
-    background: none;
-}
-
-.btn-color-2 :hover{
+.btn-color-1:hover {
     border: rgb(255, 255, 255) 0.1rem solid;
+    background-color: black; /* Set hover background to white */
+    color: white; /* Set hover text color to black */
 }
 
-.btn-container{
-    gap: 1rem;
+.btn-color-2 {
+    background: rgb(255, 255, 255); /* Set hover background to white */
+    color: black; /* Set hover text color to black */}
+
+.btn-color-2:hover {
+    border: rgb(255, 255, 255) 0.1rem solid;
+    background-color: black; /* Set hover background to white */
+    color: white; /* Set hover text color to black */
 }
 
 /*ABOUT SECTION */
@@ -309,14 +309,13 @@ section{
 .details-container {
     padding: 1.5rem;
     flex: 1;
-    background: white;
-    border-radius: 2rerm;
-    border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, 163);
-    text-align: center;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)); /* Darker gradient */
+    border-radius: 2rem;
+    border: rgb(255, 255, 255) 0.1rem solid; /* Set container border to white */
+    color: white; /* Set container text color to white */
 }
 
-.section-container{
+.section-container {
     gap: 4rem;
     height: 80%;
 }
@@ -328,13 +327,12 @@ section{
 }
 
 /* EXPERIENCE SECTION */
-
 #experience {
     position: relative;
 }
 
 .experience-sub-title {
-    color: rgb(85, 85, 85);
+    color: white; 
     font-weight: 600;
     font-size: 1.75rem;
     margin-bottom: 2rem;
@@ -342,28 +340,38 @@ section{
 
 .experience-details-container {
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
 }
 
-.article-container {
+.skill {
     display: flex;
-    text-align: initial;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 2.5rem;
-    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
 }
 
-article {
-    display: flex;
-    width: 10rem;
-    justify-content: space-around;
-    gap: 0.5rem;
+.skill-name {
+    width: 100px; /* Adjust as needed */
+    font-weight: 500;
+    color: white; /* Set skill name color to white */
 }
 
-article .icon {
-    cursor: default;
+.skill-bar {
+    flex: 1;
+    background: #333; /* Darker background for skill bar */
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+    position: relative;
+}
+
+.skill-level {
+    background: white;
+    height: 100%;
+    /* width:unset; */
+    border-radius: 10px;
+    transition: width 0.5s ease;
 }
 
 /* PROJECTS SECTION */
@@ -373,8 +381,8 @@ article .icon {
 }
 
 .color-container {
-    border-color: rgb(163, 163, 163);
-    background: rgb(250, 250, 250);
+    border-color: rgb(255, 255, 255);
+    background: rgb(50, 50, 50); /* Darker background for projects */
 }
 
 .project-img {
@@ -385,12 +393,12 @@ article .icon {
 
 .project-title {
     margin: 1rem;
-    color: black;
+    color: white; /* Set project title color to white */
 }
 
 .project-btn {
-    color: black;
-    border-color: rgb(163, 163, 163);
+    color: white; /* Set project button text color to white */
+    border-color: rgb(255, 255, 255); /* Set project button border color to white */
 }
 
 /* CONTACT */
@@ -406,11 +414,11 @@ article .icon {
     display: flex;
     justify-content: center;
     border-radius: 2rem;
-    border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, 163);
-    background: rgb(250, 250, 250);
+    border: rgb(255, 255, 255) 0.1rem solid; /* Set border to white */
+    background: rgb(50, 50, 50); /* Darker background for contact section */
     margin: 2rem auto;
     padding: 0.5rem;
+    color: white; /* Set text color to white */
 }
 
 .contact-info-container {
@@ -419,10 +427,12 @@ article .icon {
     justify-content: center;
     gap: 0.5rem;
     margin: 1rem;
+    color: white; /* Set text color to white */
 }
 
 .contact-info-container p {
     font-size: larger;
+    color: white; /* Set text color to white */
 }
 
 .contact-icon {
@@ -438,8 +448,35 @@ article .icon {
 footer {
     height: 26vh;
     margin: 0 1rem;
+    background-color: black; /* Set footer background to black */
+    color: white; /* Set footer text color to white */
 }
 
-footer p{
+footer p {
     text-align: center;
+    color: white; /* Set footer text color to white */
+}
+
+/* Hide default cursor globally */
+body, a, button, .btn, input, select {
+    cursor: none;
+}
+
+/* Custom Cursor */
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white; /* Set cursor color to white */
+    pointer-events: none;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+    z-index: 9999;
+}
+
+.cursor.hover {
+    transform: scale(2);
+    background-color: white; /* Keep hover cursor color white */
 }
