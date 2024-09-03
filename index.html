@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Specifies the character encoding for the document -->
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+
+    <!-- Ensures proper rendering and touch zooming in Internet Explorer on older versions -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Sets the viewport to make your website look good on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+
+    <!-- Document title that appears in the browser tab -->
+    <title>Frank Cardona</title>
+
+    <!-- Link to the main stylesheet -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Link to the additional media queries stylesheet -->
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
+
 <body>
     <nav id="desktop-nav">
         <div class="logo">Frank Cardona</div>
@@ -38,7 +50,7 @@
     </nav>
     <section id="profile">
         <div class="section_pic-container">
-        <img src="./assest/profile-pic.png" alt="Frank Cardona profile picture">
+        <img src="./assets/profile-pic.png" alt="Frank Cardona profile picture">
         </div>
         <div class="section_text">
             <p class="section_text_p1">Hello, I'm</p>
@@ -47,7 +59,7 @@
             <div class="btn-container">
                 <button 
                 class="btn btn-color-2" 
-                onclick="window.open('./assest/resume.pdf')"
+                onclick="window.open('./assets/Franks_Resume_SF.pdf')"
                 >
                 Download CV
             </button>
@@ -57,13 +69,13 @@
             </div>
             <div id="socials-container">
                 <img 
-                src="./assest/linkedin.png" 
+                src="./assets/linkedin.png" 
                 alt="My linkedin profile" 
                 class="icon" 
-                onclick="location.href='https://www.linkedin.com/in/frank-cardona-05b340291'"
+                onclick="location.href='https://www.linkedin.com/in/frankcardona2321'"
                 />
                 <img 
-                src="./assest/github.png" 
+                src="./assets/github.png" 
                 alt="My Github profile" 
                 class="icon" 
                 onclick="location.href='https://github.com/frank23102'"
@@ -312,7 +324,7 @@
                 </div>
             </div>
         </div>
-        <img src="./assest/arrow.png" 
+        <img src="./assets/arrow.png" 
         alt="Arrow icon" 
         class="icon arrow" 
         onclick="location.href='./#projects'"
@@ -321,88 +333,38 @@
     <section id="projects">
         <p class="section_text_p1">Browse My Recent</p>
         <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img 
-                    src="./assest/project-1.png" 
-                    alt="Project 1" 
-                    class="project-img"
-                    >
-                </div>
-                <h2 class="experience-sub-title project-title">E-Zoom bike</h2>
-                <div class="btn-container">
-                    <button 
-                    class="btn btn-color-2 project-btn" 
-                    onclick="location.href='https://github.com/'"
-                    >
-                    Github
-                </button>
-                <button 
-                class="btn btn-color-2 project-btn" 
-                onclick="location.href='https://github.com/'"
-                >
-                Live Demo
-            </button>
+    
+        <div class="projects-container">
+            <!-- Project 1 -->
+            <div class="project-item">
+                <div class="project-name">E-Zoom bike</div>
+                <img src="./assets/project-1.png" alt="Project 1" class="project-photo">
+                <div class="overlay">
+                    <p class="project-description">Collaborating with a team of engineers, we developed E-Zoom, an affordable solution to convert any standard bike into a hybrid e-bike. This kit offers a cost-effective alternative to purchasing a full electric bike, combining the best of electric and manual modes for versatile and eco-friendly transport.</p>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://stalwart-mermaid-fdd885.netlify.app'">website</button>
                 </div>
             </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img 
-                    src="./assest/project-2.png" 
-                    alt="Project 2" 
-                    class="project-img"
-                    >
-                </div>
-                <h2 class="experience-sub-title project-title">Dissection of ti-84</h2>
-                <div class="btn-container">
-                    <button 
-                    class="btn btn-color-2 project-btn" 
-                    onclick="location.href='https://github.com/'"
-                    >
-                    Github
-                </button>
-                <button 
-                class="btn btn-color-2 project-btn" 
-                onclick="location.href='https://github.com/'"
-                >
-                Live Demo
-            </button>
+    
+            <!-- Project 2 -->
+            <div class="project-item">
+                <div class="project-name">Landscape Website</div>
+                <img src="./assets/project-2.png" alt="Project 2" class="project-photo">
+                <div class="overlay">
+                    <p class="project-description">A professional website was designed and developed for a landscaping company, featuring a clean, responsive design optimized for mobile devices, tablets, and desktops. The site showcases the company's services and portfolio through an interactive gallery, detailed service descriptions, and an easy-to-use contact form. The project balances aesthetics and functionality, effectively presenting the company’s expertise and enhancing client engagement across all platforms.</p>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/frank23102/Freelance-Work.git'">Github</button>
                 </div>
             </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img 
-                    src="./assest/project-3.png" 
-                    alt="Project 3" 
-                    class="project-img"
-                    >
+    
+            <!-- Project 3 -->
+            <div class="project-item">
+                <div class="project-name">Slone 12W Audio Amplifier</div>
+                <img src="./assets/project-3.png" alt="Project 3" class="project-photo">
+                <div class="overlay">
+                    <p class="project-description">Description for Slone 12W Audio Amplifier.</p>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
                 </div>
-                <h2 class="experience-sub-title project-title">Slone 12W Audio Amplifier</h2>
-                <div class="btn-container">
-                    <button 
-                    class="btn btn-color-2 project-btn" 
-                    onclick="location.href='https://github.com/'"
-                    >
-                    Github
-                </button>
-                <button 
-                class="btn btn-color-2 project-btn" 
-                onclick="location.href='https://github.com/'"
-                >
-                Live Demo
-            </button>
-                </div>
-            </div>
             </div>
         </div>
-        <img 
-        src="./assest/arrow.png" 
-        alt="Arrow icon" 
-        class="icon arrow" 
-        onclick="location.href='./#about'"
-        >
     </section>
     <section id="about">
         <p class="section_text_p1">Get To Know More</p>
@@ -410,7 +372,7 @@
         <div class="section-container">
             <div class="section_pic-container">
                 <img 
-                src="./assest/about-pic.png" 
+                src="./assets/about-pic.png" 
                 alt="Profile picture" 
                 class="about-pic"
                 >
@@ -418,11 +380,6 @@
             <div class="about-details-container">
                 <div class="about-containers">
                     <div class="details-containers">
-                        <img 
-                        src="./assest/experience.png" 
-                        alt="experience icon" 
-                        class="icon"
-                        >
                         <h3>Experience</h3>
                         <p>Circuit Analysis
                         <br>Soldering and Prototyping 
@@ -431,24 +388,18 @@
                         <br>Technical Documentation</p>
                     </div>
                     <div class="details-containers">
-                        <img 
-                        src="./assest/education.png" 
-                        alt="education icon" 
-                        class="icon"
-                        >
                         <h3>Education</h3>
                         <p>Computer Engineering Bachelors <br> Minor in Mathematics</p>
                     </div>
                 </div>
                 <div class="text-container">
                     <p>
-                        At 22, I am a dedicated student of Computer Engineering with a minor in Math, deeply fascinated by the potential of technology and its impact on our future. My academic journey is driven by a desire to contribute to the field of artificial intelligence, where I aim to blend creativity with technical skill to push the boundaries of what's possible. Outside of my studies, I'm bilingual, speaking both English and Spanish, and I cherish the moments spent with my family. Whether I'm immersed in the latest video game or staying active through sports, I believe in maintaining a balanced and enriched life.
-                    </p>
+                        As a recent graduate, I am eager to apply the skills and knowledge I have acquired to meaningful and impactful projects. I am driven by a passion for technology and its potential to shape our future, with a particular focus on advancing the field of artificial intelligence. Fluent in both English and Spanish, I bring a strong technical foundation and a well-rounded approach to everything I do. Outside of my professional interests, I value spending quality time with family and staying active through sports and gaming                    </p>
                 </div>
             </div>
         </div>
         <img 
-        src="./assest/arrow.png" 
+        src="./assets/arrow.png" 
         alt="Arrow icon" 
         class="icon arrow" 
         onclick="location.href='./#contact'"
@@ -459,16 +410,15 @@
         <h1 class="title">Contact Me</h1>
         <div class="contact-info-upper-container">
             <div class="contact-info-container">
-                <img src="./assest/email.png" alt="Email icon" class="icon contact-icon email-icon">
+                <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon">
                 <p><a href="mailto:frankcardona123@icloud.com">frankcardona123@icloud.com</a></p>
             </div>
             <div class="contact-info-container">
-                <img src="./assest/linkedin.png" alt="LinkedIn icon" class="icon contact-icon">
+                <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon">
                 <p><a href="https://www.linkedin.com/in/frank-cardona-05b340291">LinkedIn</a></p>
             </div>
         </div>
     </section>
-    
     <footer>
         <nav>
             <div class="nav-links-container">

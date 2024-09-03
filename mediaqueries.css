@@ -43,6 +43,8 @@
     }
 }
 
+
+
 @media screen and (max-width: 600px) {
     #contact,
     footer{
@@ -52,6 +54,12 @@
         height:83vh;
         margin-bottom: 0;
     }
+    .section_pic-container {
+        width: auto;
+        height: auto; /* Let the height adjust according to the content */
+        justify-content: center;
+    }
+
     article {
         font-size: 1rem;
     }

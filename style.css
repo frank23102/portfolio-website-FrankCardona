@@ -184,11 +184,12 @@ section {
 
 .section_pic-container {
     display: flex;
-    height: 400px;
-    width: 400px;
-    margin: auto 0;
-    translate: -100px;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
 }
+
 
 .section_text {
     align-self: center;
@@ -284,6 +285,9 @@ section {
     gap: 2rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
+
+    justify-content: center;
+
 }
 
 .about-details-container {
@@ -375,31 +379,123 @@ section {
 }
 
 /* PROJECTS SECTION */
-
 #projects {
+    padding: 10px 10px;
+    background-color: transparent;
+}
+
+.projects-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Reduced gap to fit items better */
+}
+
+.project-item {
     position: relative;
+    width: 500px; /* Reduced width to ensure three items fit */
+    margin: 10px; /* Reduced margin for better spacing */
+    border: 1px solid #ddd;
+    box-shadow: 0 34px 38px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.5s ease;
 }
 
-.color-container {
-    border-color: rgb(255, 255, 255);
-    background: rgb(50, 50, 50); /* Darker background for projects */
+.project-item:hover {
+    transform: scale(1.05);
 }
 
-.project-img {
-    border-radius: 2rem;
-    width: 90%;
-    height: 90%;
+.project-item img {
+    width: 100%;
+    height: 500px; /* Fixed height to maintain aspect ratio */
+    display: block;
+    object-fit: cover;
+    filter: brightness(.8);
+    transition: transform 0.5s ease, filter 0.5s ease;
 }
 
-.project-title {
-    margin: 1rem;
-    color: white; /* Set project title color to white */
+.project-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.3) blur(5px);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.project-item:hover .overlay {
+    opacity: 1;
+}
+
+.project-description {
+    font-size: 14px; /* Reduced font size for better fit */
+    margin-bottom: 10px;
 }
 
 .project-btn {
-    color: white; /* Set project button text color to white */
-    border-color: rgb(255, 255, 255); /* Set project button border color to white */
+    margin-top: auto;
+    padding: 8px 15px; /* Adjusted padding for smaller button */
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+.project-btn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.project-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem; /* Slightly reduced font size */
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
+    background-color: transparent;
+    z-index: 2;
+    text-align: center;
+    transition: opacity 0.5s ease;
+}
+
+.project-item:hover .project-name {
+    opacity: 0;
+}
+
+@media (max-width: 600px) {
+    .project-item {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .project-item img {
+        height: auto;
+    }
+}
+
 
 /* CONTACT */
 
@@ -415,7 +511,7 @@ section {
     justify-content: center;
     border-radius: 2rem;
     border: rgb(255, 255, 255) 0.1rem solid; /* Set border to white */
-    background: rgb(50, 50, 50); /* Darker background for contact section */
+    background: black; /* Darker background for contact section */
     margin: 2rem auto;
     padding: 0.5rem;
     color: white; /* Set text color to white */
@@ -448,7 +544,7 @@ section {
 footer {
     height: 26vh;
     margin: 0 1rem;
-    background-color: black; /* Set footer background to black */
+    background-color: transparent; /* Set footer background to black */
     color: white; /* Set footer text color to white */
 }
 
