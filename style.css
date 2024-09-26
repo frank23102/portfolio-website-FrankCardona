@@ -485,18 +485,6 @@ section {
     opacity: 0;
 }
 
-@media (max-width: 600px) {
-    .project-item {
-        width: 90%;
-        margin: 10px auto;
-    }
-
-    .project-item img {
-        height: auto;
-    }
-}
-
-
 /* CONTACT */
 
 #contact {
